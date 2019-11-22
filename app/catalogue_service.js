@@ -23,16 +23,71 @@ const catalogue = [
 ];
 
 function countBooks() {
-  // Your code here
+  return catalogue.length;  
 }
 
 function checkBook(book) {
-  // Your code here
+//I need to look at each book in the catalogue
+    //for (let i=0; i<catalogue.length; i++){
+      // let bookToCheck =cataogue[i]; console.log(book);
+    
+    
+    //}
+//whilst checking each book, need to see if the book and author 
+//match the one that is passed into the function
+ // if it does I can return true (without checking the rest)
+ //otherwise i need to cont. checking 
+
+ // if (bookToCheck ===book) {
+ // return true;  
+ // } }
+ // else {return false;}
+
+  var i;
+for (i = 0; i < catalogue.length; i++) {
+  if (catalogue[i] === book) {return true}; 
+  //else {return false;
 }
 
+return false;}
+
+//{
+//catalogue.forEach(book => return book);
+
+//{if (book) {return true;} else {return false;};
+//}
+// if (book) for catalogue.for each
+//
+
 function countBooksByFirstLetter(letter) {
-  // Your code here
-}
+  // Your code here:
+//  var i;
+//  for(i=0, i<catalogue.length; i++) {
+  //   if (catalogue[i] === catalogue.startsWith(letter,0) 
+  //   {return var x= catalogue.startsWith(letter,0); 
+  //   x.toString();})
+  // }
+  // // return 0;}
+
+  
+  // const newArray = catalogue.filter((letter) => {
+  //   return catalogue.startsWith === letter;})
+  
+  let original =[catalogue];
+  let countBooksByFirstLetter = original.filter(
+    function(original)
+    {return original.startsWith === letter;});
+    console.log(countBooksByFirstLetter);
+
+
+//   const newArray = catalogue.filter(function(letter) => {
+//       return catalogue.startsWith === letter;})
+// console.log(newArray);
+
+
+  //catalogue.startsWith(letter, 0);
+
+//}
 
 function countBooksByKeyword(keyword) {
   // Your code here
@@ -41,6 +96,9 @@ function countBooksByKeyword(keyword) {
 function getBooksByAuthor(author) {
   // Your code here
 }
+
+  
+
 
 module.exports = {
   countBooks,
